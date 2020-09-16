@@ -1,0 +1,45 @@
+.cke_texteffectslidercontrol div:first-child {
+	display: flex;
+	justify-content: space-between;
+	padding: 0.5em 1.5em 0 0.85em;
+	align-items: center;
+}
+
+.cke_texteffectslidercontrol div:first-child div {
+	width: 18px;
+	height: 18px;
+	background-color: black;
+}
+
+.cke_texteffectslider {
+	font-size: 10pt;
+	display: flex;
+	align-items: center;
+	padding: 0.5em;
+}
+
+.cke_texteffectslider label, .cke_texteffectslider span {
+	white-space: nowrap;
+	padding: 0 0.5em;
+	flex: 0;
+}
+
+.cke_texteffectslider div {
+	display: flex;
+}
+
+.cke_texteffectslider label {
+	flex-basis: 30%;
+}
+
+.cke_texteffectslider input {
+	flex: 1;
+}
+
+.cke_texteffectslider span {
+	min-width: 2em;
+}
+
+.cke_texteffectslider.disabled label, .cke_texteffectslider.disabled span {
+	opacity: 0.3;
+}
