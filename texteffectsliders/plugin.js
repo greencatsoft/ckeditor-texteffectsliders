@@ -21,12 +21,12 @@ CKEDITOR.plugins.add( 'texteffectsliders', {
 				{
 					name: 'shadow',
 					horizontal: {
-						min: getConfig( CKEDITOR.config.horizontal_min, 0 ),
+						min: getConfig( CKEDITOR.config.horizontal_min, -100 ),
 						max: getConfig( CKEDITOR.config.horizontal_max, 100 ),
 						step: getConfig( CKEDITOR.config.horizontal_step, 1 )
 					},
 					vertical: {
-						min: getConfig( CKEDITOR.config.vertical_min, 0 ),
+						min: getConfig( CKEDITOR.config.vertical_min, -100 ),
 						max: getConfig( CKEDITOR.config.vertical_max, 100 ),
 						step: getConfig( CKEDITOR.config.vertical_step, 1 )
 					},
@@ -393,7 +393,7 @@ CKEDITOR.config.texteffectsliders_outlineStyle = {
 
 /**
  * Minimum value for shadow horizontal.
- * @cfg {Number} [horizontal_min=0]
+ * @cfg {Number} [horizontal_min=-100]
  * @member CKEDITOR.config
  */
 
@@ -411,7 +411,7 @@ CKEDITOR.config.texteffectsliders_outlineStyle = {
 
 /**
  * Minimum value for shadow vertical.
- * @cfg {Number} [vertical_min=0]
+ * @cfg {Number} [vertical_min=-100]
  * @member CKEDITOR.config
  */
 
