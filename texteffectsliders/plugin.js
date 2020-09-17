@@ -127,13 +127,16 @@ CKEDITOR.effectorControl = CKEDITOR.tools.createClass({
 
 			if ( cls.startsWith( 'cke_effect-shadow-' ) ) {
 				var rgba = this.convertColorToRgba( attrs[0] );
+				var horizontal = this.element.findOne( 'input.cke_effect-shadow-horizontal' ).$.value;
+				var vertical = this.element.findOne( 'input.cke_effect-shadow-vertical' ).$.value;
 
 				args = {
-					horizontal: this.convertToFloat( attrs[1] ) / size,
-					vertical: this.convertToFloat( attrs[2] ) / size,
+					horizontal: horizontal / 100,
+					vertical: vertical / 100,
 					blur: this.convertToFloat( attrs[3] ),
 					transparency: rgba[3],
-					color: rgba[0] + ',' + rgba[1] + ',' + rgba[2]
+					color: rgba[0] + ',' + rgba[1] + ',' + rgba[2],
+					size: size
 				}
 
 				if (cls.endsWith( 'horizontal' )) {
@@ -352,7 +355,10 @@ CKEDITOR.effectorControl = CKEDITOR.tools.createClass({
  */
 CKEDITOR.config.texteffectsliders_shadowStyle = {
 	element: 'span',
-	styles: { 'text-shadow': 'rgba(#(color), #(transparency)) #(horizontal)em #(vertical)em #(blur)px' },
+	styles: {
+		'text-shadow': 'rgba(#(color), #(transparency)) #(horizontal)em #(vertical)em #(blur)px',
+		'font-size': '#(size)px'
+	},
 	getStyleValues: function( block ) {
 		var shadow = block.getComputedStyle( 'text-shadow' );
 		var color = block.getComputedStyle( 'color' );
