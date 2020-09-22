@@ -21,24 +21,24 @@ CKEDITOR.plugins.add( 'texteffectsliders', {
 				{
 					name: 'shadow',
 					horizontal: {
-						min: getConfig( CKEDITOR.config.horizontal_min, -100 ),
-						max: getConfig( CKEDITOR.config.horizontal_max, 100 ),
-						step: getConfig( CKEDITOR.config.horizontal_step, 1 )
+						min: getConfig( CKEDITOR.config.texteffectsliders_horizontal_min, -100 ),
+						max: getConfig( CKEDITOR.config.texteffectsliders_horizontal_max, 100 ),
+						step: getConfig( CKEDITOR.config.texteffectsliders_horizontal_step, 1 )
 					},
 					vertical: {
-						min: getConfig( CKEDITOR.config.vertical_min, -100 ),
-						max: getConfig( CKEDITOR.config.vertical_max, 100 ),
-						step: getConfig( CKEDITOR.config.vertical_step, 1 )
+						min: getConfig( CKEDITOR.config.texteffectsliders_vertical_min, -100 ),
+						max: getConfig( CKEDITOR.config.texteffectsliders_vertical_max, 100 ),
+						step: getConfig( CKEDITOR.config.texteffectsliders_vertical_step, 1 )
 					},
 					blur: {
-						min: getConfig( CKEDITOR.config.blur_min, 0 ),
-						max: getConfig( CKEDITOR.config.blur_max, 100 ),
-						step: getConfig( CKEDITOR.config.blur_step, 1 )
+						min: getConfig( CKEDITOR.config.texteffectsliders_blur_min, 0 ),
+						max: getConfig( CKEDITOR.config.texteffectsliders_blur_max, 100 ),
+						step: getConfig( CKEDITOR.config.texteffectsliders_blur_step, 1 )
 					},
 					transparency: {
-						min: getConfig( CKEDITOR.config.transparency_min, 0 ),
-						max: getConfig( CKEDITOR.config.transparency_max, 1 ),
-						step: getConfig( CKEDITOR.config.transparency_step, 0.1 )
+						min: getConfig( CKEDITOR.config.texteffectsliders_transparency_min, 0 ),
+						max: getConfig( CKEDITOR.config.texteffectsliders_transparency_max, 1 ),
+						step: getConfig( CKEDITOR.config.texteffectsliders_transparency_step, 0.1 )
 					}
 				},
 				editor ),
@@ -46,9 +46,9 @@ CKEDITOR.plugins.add( 'texteffectsliders', {
 				{
 					name: 'outline',
 					width: {
-						min: getConfig(CKEDITOR.config.width_min, 0),
-						max: getConfig(CKEDITOR.config.width_max, 50),
-						step: getConfig(CKEDITOR.config.width_step, 1)
+						min: getConfig(CKEDITOR.config.texteffectsliders_width_min, 0),
+						max: getConfig(CKEDITOR.config.texteffectsliders_width_max, 50),
+						step: getConfig(CKEDITOR.config.texteffectsliders_width_step, 1)
 					}
 				},
 				editor )
@@ -399,87 +399,87 @@ CKEDITOR.config.texteffectsliders_outlineStyle = {
 
 /**
  * Minimum value for shadow horizontal.
- * @cfg {Number} [horizontal_min=-100]
+ * @cfg {Number} [texteffectsliders_horizontal_min=-100]
  * @member CKEDITOR.config
  */
 
 /**
  * Maximum value for shadow horizontal.
- * @cfg {Number} [horizontal_max=100]
+ * @cfg {Number} [texteffectsliders_horizontal_max=100]
  * @member CKEDITOR.config
  */
 
 /**
  * Interval (step) to be used for shadow horizontal.
- * @cfg {Number} [horizontal_step=1]
+ * @cfg {Number} [texteffectsliders_horizontal_step=1]
  * @member CKEDITOR.config
  */
 
 /**
  * Minimum value for shadow vertical.
- * @cfg {Number} [vertical_min=-100]
+ * @cfg {Number} [texteffectsliders_vertical_min=-100]
  * @member CKEDITOR.config
  */
 
 /**
  * Maximum value for shadow vertical.
- * @cfg {Number} [vertical_max=100]
+ * @cfg {Number} [texteffectsliders_vertical_max=100]
  * @member CKEDITOR.config
  */
 
 /**
  * Interval (step) to be used for shadow vertical.
- * @cfg {Number} [vertical_step=1]
+ * @cfg {Number} [texteffectsliders_vertical_step=1]
  * @member CKEDITOR.config
  */
 /**
  * Minimum value for shadow blur.
- * @cfg {Number} [blur_min=0]
+ * @cfg {Number} [texteffectsliders_blur_min=0]
  * @member CKEDITOR.config
  */
 
 /**
  * Maximum value for shadow blur.
- * @cfg {Number} [blur_max=100]
+ * @cfg {Number} [texteffectsliders_blur_max=100]
  * @member CKEDITOR.config
  */
 
 /**
  * Interval (step) to be used for shadow blur.
- * @cfg {Number} [blur_step=1]
+ * @cfg {Number} [texteffectsliders_blur_step=1]
  * @member CKEDITOR.config
  */
 /**
  * Minimum value for shadow transparency.
- * @cfg {Number} [transparency_min=0]
+ * @cfg {Number} [texteffectsliders_transparency_min=0]
  * @member CKEDITOR.config
  */
 
 /**
  * Maximum value for shadow transparency.
- * @cfg {Number} [transparency_max=1]
+ * @cfg {Number} [texteffectsliders_transparency_max=1]
  * @member CKEDITOR.config
  */
 
 /**
  * Interval (step) to be used for shadow transparency.
- * @cfg {Number} [transparency_step=0.1]
+ * @cfg {Number} [texteffectsliders_transparency_step=0.1]
  * @member CKEDITOR.config
  */
 /**
  * Minimum value for outline width.
- * @cfg {Number} [width_min=0]
+ * @cfg {Number} [texteffectsliders_width_min=0]
  * @member CKEDITOR.config
  */
 
 /**
  * Maximum value for outline width.
- * @cfg {Number} [width_max=50]
+ * @cfg {Number} [texteffectsliders_width_max=50]
  * @member CKEDITOR.config
  */
 
 /**
  * Interval (step) to be used for outline width.
- * @cfg {Number} [width_step=1]
+ * @cfg {Number} [texteffectsliders_width_step=1]
  * @member CKEDITOR.config
  */
