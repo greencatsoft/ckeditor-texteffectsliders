@@ -162,7 +162,7 @@ CKEDITOR.effectorControl = CKEDITOR.tools.createClass({
 				}
 
 				if (cls.endsWith( 'width' )) {
-					args.width = value / 100;
+					args.width = value / 1000;
 				} else {
 					args.color = value;
 				}
@@ -338,8 +338,8 @@ CKEDITOR.effectorControl = CKEDITOR.tools.createClass({
 						}
 					}
 				} else {
-					this.element.findOne( 'input.cke_effect-outline-width' ).$.value = applyValue( values[1], this.editor, this.convertToFloat )
-					this.element.findOne( 'span.cke_effect-outline-width' ).setHtml( applyValue( values[1], this.editor, this.convertToFloat ) );
+					this.element.findOne( 'input.cke_effect-outline-width' ).$.value = applyValue( values[1], this.editor, this.convertToFloat ) * 10
+					this.element.findOne( 'span.cke_effect-outline-width' ).setHtml( applyValue( values[1], this.editor, this.convertToFloat ) * 10 );
 				}
 
 				this.element.findOne( '.cke_effect-' + this.settings.name + '-color' ).setStyle( 'background-color', values[0] );
