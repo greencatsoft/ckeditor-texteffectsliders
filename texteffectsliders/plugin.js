@@ -157,7 +157,8 @@ CKEDITOR.effectorControl = CKEDITOR.tools.createClass({
 			} else if (cls.startsWith( 'cke_effect-outline' )) {
 				args = {
 					width: this.convertToFloat( attrs[1] ) / size,
-					color: attrs[0]
+					color: attrs[0],
+					size: size
 				}
 
 				if (cls.endsWith( 'width' )) {
@@ -385,7 +386,8 @@ CKEDITOR.config.texteffectsliders_outlineStyle = {
 	element: 'span',
 	styles: {
 		'-webkit-text-stroke-width': '#(width)em',
-		'-webkit-text-stroke-color': '#(color)'
+		'-webkit-text-stroke-color': '#(color)',
+		'font-size': '#(size)px'
 	},
 	getStyleValues: function( block ) {
 		var width = block.getComputedStyle( '-webkit-text-stroke-width' );
