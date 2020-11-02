@@ -87,7 +87,7 @@ CKEDITOR.plugins.add( 'texteffectsliders', {
 				block.element.addClass( 'cke_texteffectslidersblock' );
 
 				for ( var id in controls ) {
-					controls[id].render( block.element );
+					controls[id].render( block.element, panel );
 				}
 			},
 			onOpen: function() {
@@ -227,7 +227,7 @@ CKEDITOR.effectorControl = CKEDITOR.tools.createClass({
 				return +a
 			});
         },
-		render: function( parent ) {
+		render: function( parent, panel ) {
 			var onChange = CKEDITOR.tools.addFunction( function ( value, cls, saveSnapshot ) {
 				this.setValue( value, cls );
 
@@ -292,9 +292,17 @@ CKEDITOR.effectorControl = CKEDITOR.tools.createClass({
 			var e = this.editor,
 				settings = this.settings;
 
-            parent.findOne( 'div:first-child div.cke_effect-' + settings.name + '-color' ).on( 'click', function () {
+			var colorButton = parent.findOne( 'div:first-child div.cke_effect-' + settings.name + '-color' );
+
+			colorButton.on( 'click', function () {
+				panel.allowBlur( false );
+
 				e.getColorFromDialog( function( color ) {
+					panel.allowBlur( true );
+					window.setTimeout(function() { panel.focus(); }, 10);
+
 					if ( color ) {
+						colorButton.setStyle( "background-color", color );
 						CKEDITOR.tools.callFunction( onChange, color, 'cke_effect-' + settings.name + '-color' );
 					}
 				}, this );
