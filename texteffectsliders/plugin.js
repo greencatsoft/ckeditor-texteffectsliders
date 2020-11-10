@@ -302,10 +302,10 @@ CKEDITOR.effectorControl = CKEDITOR.tools.createClass({
 					window.setTimeout(function() { panel.focus(); }, 10);
 
 					if ( color ) {
-						colorButton.setStyle( "background-color", color );
+						colorButton.setStyle( 'background-color', color );
 						CKEDITOR.tools.callFunction( onChange, color, 'cke_effect-' + settings.name + '-color' );
 					}
-				}, this );
+				}, this, colorButton.getStyle( 'background-color' ) );
 			})
 
 			this.element = parent.findOne( '#' + settings.name );
